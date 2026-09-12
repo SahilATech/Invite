@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,10 +105,13 @@
     padding: 34px 24px 30px;
     position: relative;
     background:
+      linear-gradient(180deg, rgba(12,12,12,0.28), rgba(12,12,12,0.12)),
+      url('assets/couple-lake-bw.png') center/cover no-repeat,
       radial-gradient(circle at 15% 10%, rgba(232,134,43,0.06), transparent 40%),
       radial-gradient(circle at 85% 90%, rgba(201,162,68,0.08), transparent 45%);
     transform: rotate(-0.4deg);
     box-shadow: 0 14px 34px rgba(90,14,24,0.1);
+    overflow: hidden;
   }
 
   .corner {
@@ -463,13 +467,14 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 600;
-    background: linear-gradient(120deg, var(--gold) 0%, var(--marigold) 45%, var(--gold-light) 65%, var(--gold) 100%);
+    background: linear-gradient(120deg, rgba(255,255,255,0.96) 0%, rgba(241,219,179,0.95) 45%, rgba(255,255,255,0.98) 65%, rgba(241,219,179,0.9) 100%);
     background-size: 220% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: var(--maroon);
+    color: #fff;
     animation: foilShine 4s linear infinite;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
   @keyframes foilShine {
     0% { background-position: 0% center; }
@@ -477,10 +482,15 @@
   }
   .couple-band .weds-word {
     font-family: 'Mrs Saint Delafield', cursive;
-    color: var(--marigold);
+    color: rgba(255,255,255,0.95);
     font-size: 1.3rem;
     display: block;
     margin: 2px 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  }
+
+  .photo-showcase {
+    display: none;
   }
 
   .family-cols {
@@ -945,6 +955,14 @@
     <div class="scroll-hint">Scroll for the invitation ✦</div>
   </section>
 
+  <section class="photo-showcase">
+    <div class="photo-banner reveal" style="background-image: url('assets/couple-floral-quote.png');"></div>
+    <div class="photo-pair reveal">
+      <div class="photo-panel" style="background-image: url('assets/couple-sunset-portrait.png');"></div>
+      <div class="photo-panel" style="background-image: url('assets/couple-lake-bw.png');"></div>
+    </div>
+  </section>
+
   <!-- INVITATION TEXT -->
   <section class="invite-wrap">
     <div class="framed reveal">
@@ -967,25 +985,25 @@
         <path d="M24 10c1.5 2.5 4 3 4 6.5S25.5 22 24 24c-1.5-2-4-3.5-4-7.5s2.5-4 4-6.5z" fill="currentColor" opacity="0.85"/>
         <path d="M24 24c1.5 2.5 4 3 4 6.5S25.5 36 24 38c-1.5-2-4-3.5-4-7.5s2.5-4 4-6.5z" fill="currentColor" opacity="0.85"/>
       </svg>
-      <p class="invite-line">With hearts full of gratitude and joy, we request the honour of your presence as our families come together to bless the union of</p>
+      <p class="invite-line" style="color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.3);">With hearts full of gratitude and joy, we request the honour of your presence as our families come together to bless the union of</p>
 
       <div class="couple-band">
         <div class="names-big">Pradhan Meghwanshi</div>
         <span class="weds-word">&amp; Sheetal Meghwanshi</span>
       </div>
 
-      <div class="family-cols">
-        <div class="family-block">
-          <span class="role">Groom's Family</span>
-          <div class="fam-name">Pradhan Meghwanshi</div>
-          <div class="parent-line">S/o Shri ___ Meghwanshi</div>
-          <div class="parent-line">&amp; Smt. ___ Meghwanshi</div>
+      <div class="family-cols" style="background: rgba(255,255,255,0.08); padding: 8px; border-radius: 12px; backdrop-filter: blur(3px);">
+        <div class="family-block" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">
+          <span class="role" style="color: #f3d9a1;">Groom's Family</span>
+          <div class="fam-name" style="color: rgba(255,255,255,0.95);">Pradhan Meghwanshi</div>
+          <div class="parent-line" style="color: rgba(255,255,255,0.82);">S/o Shri Gulab Chand Meghwanshi</div>
+          <div class="parent-line" style="color: rgba(255,255,255,0.82);">&amp; Smt. Kailashi Devi</div>
         </div>
-        <div class="family-block">
-          <span class="role">Bride's Family</span>
-          <div class="fam-name">Sheetal Meghwanshi</div>
-          <div class="parent-line">D/o Shri ___ Meghwanshi</div>
-          <div class="parent-line">&amp; Smt. ___ Meghwanshi</div>
+        <div class="family-block" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.9);">
+          <span class="role" style="color: #f3d9a1;">Bride's Family</span>
+          <div class="fam-name" style="color: rgba(255,255,255,0.95);">Sheetal Meghwanshi</div>
+          <div class="parent-line" style="color: rgba(255,255,255,0.82);">D/o Shri Mandan Lal Meghwanshi</div>
+          <div class="parent-line" style="color: rgba(255,255,255,0.82);">&amp; Smt. Jameela Devi</div>
         </div>
       </div>
     </div>
@@ -1020,7 +1038,7 @@
       <div class="unit"><div class="num" id="cd-mins">00</div><div class="label">Mins</div></div>
       <div class="unit"><div class="num" id="cd-secs">00</div><div class="label">Secs</div></div>
     </div>
-    <p class="countdown-note reveal">Varmala Muhurat · 22nd November 2026, 7:00 PM</p>
+    <p class="countdown-note reveal">Varmala Muhurat · 22nd November 2026, 10:00 PM</p>
   </section>
 
   <!-- CEREMONY SCHEDULE with icons -->
@@ -1120,8 +1138,8 @@
       <svg class="pin" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
       <div class="name">Meghwanshi Niwas</div>
       <div class="time">22 Nov · 5:00 PM</div>
-      <div class="addr">Groom's residence — Meghwanshi Niwas, near Ajmer Road, Beawar, Rajasthan 305901<br>(Full address to be shared closer to the date.)</div>
-      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Meghwanshi+Niwas%2C+Ajmer+Road%2C+Beawar%2C+Rajasthan" target="_blank" rel="noopener">
+      <div class="addr">Groom's residence <br> Meghwanshi Niwas, Indira Colony, Purana Badgaon, Makhupura, Ajmer, Rajasthan, 305002<br></div>
+      <a class="map-btn" href="https://maps.app.goo.gl/AsqgFKdtwgv5uyHM8" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
         View on Google Maps
       </a>
@@ -1130,10 +1148,10 @@
     <span class="venue-tag reveal">✿ Wedding Venue</span>
     <div class="venue-card reveal">
       <svg class="pin" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-      <div class="name">Royal Rajputana Palace</div>
+      <div class="name">Power House Palace</div>
       <div class="time">22 Nov · 7:00 PM Vivah Muhurat</div>
-      <div class="addr">Royal Rajputana Palace, Pushkar Road, Beawar, Rajasthan 305901<br>(Full address to be shared closer to the date.)</div>
-      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Royal+Rajputana+Palace%2C+Beawar%2C+Rajasthan" target="_blank" rel="noopener">
+      <div class="addr">Wedding Venue <br> NH 14, Gayatri Nagar, Beawar, Rajasthan 305901<br></div>
+      <a class="map-btn" href="https://maps.app.goo.gl/WRywNtPtU2AG1n2Q9" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
         View on Google Maps
       </a>
@@ -1142,10 +1160,10 @@
     <span class="venue-tag reveal">✿ Reception Venue</span>
     <div class="venue-card reveal">
       <svg class="pin" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-      <div class="name">Grand Celebration Banquet Hall</div>
+      <div class="name">Kesar Resort</div>
       <div class="time">23 Nov · 7:00 PM Onwards</div>
-      <div class="addr">Grand Celebration Banquet Hall, Station Road, Beawar, Rajasthan 305901<br>(Full address to be shared closer to the date.)</div>
-      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Grand+Celebration+Banquet+Hall%2C+Beawar%2C+Rajasthan" target="_blank" rel="noopener">
+      <div class="addr">Hatundi road, Makhupura, Ajmer, Rajasthan 305002<br></div>
+      <a class="map-btn" href="https://maps.app.goo.gl/ojJdCEQu6ax1SKux8" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
         View on Google Maps
       </a>
@@ -1166,7 +1184,7 @@
 
 <script>
   // Countdown to Varmala Muhurat — 22 Nov 2026, 7:00 PM
-  const targetDate = new Date('2026-11-22T19:00:00');
+  const targetDate = new Date('2026-11-22T22:00:00');
 
   function updateCountdown() {
     const now = new Date();
